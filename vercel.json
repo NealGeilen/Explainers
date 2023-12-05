@@ -1,6 +1,5 @@
 {
   "rewrites": [
-    { "source": "/e/:explain*/*(.css|.js)", "destination": "/:explain*" },
     { "source": "/e/:explain*", "destination": "/:explain*/index.html" }
   ],
   "buildCommand": "npm run build",
