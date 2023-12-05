@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "search_dir=`cd explainers && ls *.md`for entry in \"$search_dir\"\ndo\n  name=${entry::${#entry}-3}\n  exec npx slidev build \"explainers/$entry\" --out \"./../dist/$name\" --base /\ndone",
+    "build": "search_dir=`cd explainers && ls *.md`\nfor entry in \"$search_dir\"\ndo\n  name=${entry::${#entry}-3}\n  exec npx slidev build \"explainers/$entry\" --out \"./../dist/$name\" --base /\ndone\n",
     "dev": "slidev --open",
     "export": "slidev export"
   },
