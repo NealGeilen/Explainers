@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/e/:explain*", "destination": "/:explain*/index.html" }
+    { "source": "/e/:explain*", "destination": "/:explain*" }
   ],
   "buildCommand": "npm run build",
   "outputDirectory": "dist"
