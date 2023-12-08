@@ -3,10 +3,10 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "search_dir=`cd explainers && ls *.md`\nfor entry in \"$search_dir\"\ndo\n  name=${entry::${#entry}-3}\n  exec npx slidev build \"explainers/$entry\" --out \"./../dist/$name\" --base /e/$name\ndone\n",
+    "build-explainers": "search_dir=`cd explainers && ls *.md`\nfor entry in \"$search_dir\"\ndo\n  name=${entry::${#entry}-3}\n  exec npx slidev build \"explainers/$entry\" --out \"./../dist/$name\" --base /e/$name\ndone\n",
+    "build-vue": "vite build",
+    "build": "npm run build-vue && npm run build-explainers",
     "dev": "vite",
-    "build-vue": "run-p type-check \"build-only {@}\" --",
-    "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
