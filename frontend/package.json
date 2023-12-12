@@ -3,18 +3,14 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build-explainers": "search_dir=`cd explainers && ls *.md`\nfor entry in \"$search_dir\"\ndo\n  name=${entry::${#entry}-3}\n  exec npx slidev build \"explainers/$entry\" --out \"./../dist/$name\" --base /e/$name\ndone\n",
-    "build-vue": "vite build",
+    "build-slidev": "npm --prefix ../slidev run build --out ./",
     "build": "npm run build-vue && npm run build-explainers",
     "dev": "vite",
     "type-check": "vue-tsc --build --force",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "lint": "eslint .. --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src"
   },
   "dependencies": {
-    "@slidev/cli": "^0.44.0",
-    "@slidev/theme-default": "latest",
-    "@slidev/theme-seriph": "latest",
     "pinia": "^2.1.7",
     "vue": "^3.3.10",
     "vue-router": "^4.2.5",

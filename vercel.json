@@ -1,7 +1,8 @@
 {
   "rewrites": [
-    { "source": "/e/:explain*", "destination": "/:explain*/" }
+    { "source": "/e/:explain*", "destination": "/:explain*/" },
+    { "source": "/:main*", "destination": "/" }
   ],
-  "buildCommand": "npm run build",
+  "buildCommand": "pnpm --prefix ./frontend run build && pnpm --prefix ./slidev run build-explainers",
   "outputDirectory": "dist"
 }

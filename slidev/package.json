@@ -1,0 +1,16 @@
+{
+  "name": "explainers-slidev",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build-explainers": "search_dir=`cd ./explainers && ls *.md`\nfor entry in \"$search_dir\"\ndo\n  name=${entry::${#entry}-3}\n  exec pnpm run slidev build \"./explainers/$entry\" --out \"./../../dist/$name\" --base /e/$name\ndone\n",
+    "build": "slidev build ./explainers/git-explained.md --out ./../../dist",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.44.0",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest"
+  }
+}
