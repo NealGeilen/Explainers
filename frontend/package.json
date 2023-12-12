@@ -3,8 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build-slidev": "npm --prefix ../slidev run build --out ./",
-    "build": "npm run build-vue && npm run build-explainers",
+    "build": "vite build",
     "dev": "vite",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint .. --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
