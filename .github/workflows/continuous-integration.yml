@@ -32,6 +32,9 @@ jobs:
         with:
           node-version: 18
           cache: 'pnpm'
+          cache-dependency-path: |
+           'frontend/pnpm-lock.yaml'
+           'slidev/pnpm-lock.yaml'
       - name: Install modules
         run: pnpm --prefix ./frontend install && --prefix ./slidev
       - name: Build
