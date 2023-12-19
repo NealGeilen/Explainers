@@ -13,6 +13,7 @@ on:
       - '**.vue'
       - '**.css'
       - '**.yaml'
+      - '**.yml'
 
 jobs:
 
