@@ -36,7 +36,7 @@ jobs:
              frontend/pnpm-lock.yaml
              slidev/pnpm-lock.yaml
       - name: Install modules
-        run: pnpm --prefix ./frontend install && --prefix ./slidev
+        run: pnpm --prefix ./frontend install && pnpm --prefix ./slidev install
       - name: Build
         run: pnpm --prefix ./frontend run build && pnpm --prefix ./slidev run build-explainers
 
