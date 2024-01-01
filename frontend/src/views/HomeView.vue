@@ -6,7 +6,9 @@ const particlesInit = async engine => {
   // await loadFull(engine);
   await loadSlim(engine);
 };
-
+function travel(path: string): void{
+  location.replace(path)
+}
 </script>
 
 <template>
@@ -15,7 +17,7 @@ const particlesInit = async engine => {
       <h1 class="text-primary text-center">Explainers</h1>
       <v-row>
         <v-col cols="4" md="6" v-for="pres in presentations">
-          <v-card :to="{path: pres.url}">
+          <v-card @click="travel(pres.url)">
             <v-card-title>{{pres?.name}}</v-card-title>
             <v-card-text>{{pres?.description}}</v-card-text>
           </v-card>
