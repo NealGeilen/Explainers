@@ -3,12 +3,19 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build-explainers": "pnpm i && search_dir=`cd ./explainers && ls *.md`\nfor entry in \"$search_dir\"\ndo\n  name=${entry::${#entry}-3}\n  exec pnpm slidev build \"./explainers/$entry\" --out \"./../../dist/$name\" --base /e/$name\ndone\n",
+    "build-explainers": "pnpm i && search_dir=\"./explainers\"\nfor entry in \"$search_dir\"/*.md; do\n  name=$(basename \"$entry\" .md)\n  pnpm slidev build \"$entry\" --out \"./../../dist/$name\" --base \"/e/$name\"\ndone",
     "build": "slidev build ./explainers/git-explained.md --out ./../../dist",
     "dev": "slidev --open",
-    "export": "slidev export"
+    "export": "slidev export",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "format": "prettier --check ."
   },
   "dependencies": {
+    "@vue/eslint-config-prettier": "^8.0.0",
+    "@vue/eslint-config-typescript": "^12.0.0",
+    "@vue/tsconfig": "^0.4.0",
+    "eslint": "^8.49.0",
+    "eslint-plugin-vue": "^9.17.0",
     "@slidev/cli": "^0.44.0",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest"
