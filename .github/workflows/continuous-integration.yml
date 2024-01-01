@@ -63,7 +63,7 @@ jobs:
       - name: Perform linter
         run: pnpm --prefix ./${{ matrix.project }} run lint
       - name: Perform code formatter
-        run: pnpm --prefix ./${{ matrix.project }} run format-code
+        run: pnpm --prefix ./${{ matrix.project }} run format
 
   code-analysis:
     name: Code analysis
