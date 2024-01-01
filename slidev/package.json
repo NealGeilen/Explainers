@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build-explainers": "pnpm i && search_dir=`cd ./explainers && ls *.md`\nfor entry in \"$search_dir\"\ndo\n  name=${entry::${#entry}-3}\n  exec pnpm slidev build \"./explainers/$entry\" --out \"./../../dist/$name\" --base /e/$name\ndone\n",
+    "build-explainers": "pnpm i && #!/bin/bash search_dir=`cd ./explainers && ls *.md`\nfor entry in \"$search_dir\"\ndo\n  name=${entry::${#entry}-3}\n  exec pnpm slidev build \"./explainers/$entry\" --out \"./../../dist/$name\" --base /e/$name\ndone\n",
     "build": "slidev build ./explainers/git-explained.md --out ./../../dist",
     "dev": "slidev --open",
     "export": "slidev export"
