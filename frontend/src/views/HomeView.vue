@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import { loadSlim } from "tsparticles-slim";
-
+import presentations from "./../../../presentations.json"
+console.log(presentations)
 const particlesInit = async engine => {
   // await loadFull(engine);
   await loadSlim(engine);
 };
-
-const particlesLoaded = async container => {
-  console.log("Particles container loaded", container);
-};
-
+function travel(path: string): void{
+  location.replace(path)
+}
 </script>
 
 <template>
@@ -17,28 +16,10 @@ const particlesLoaded = async container => {
     <div class="d-block">
       <h1 class="text-primary text-center">Explainers</h1>
       <v-row>
-        <v-col cols="4" md="6">
-          <v-card>
-            <v-card-title>Test</v-card-title>
-            <v-card-text>Description</v-card-text>
-          </v-card>
-        </v-col>
-        <v-col cols="4" md="6">
-          <v-card>
-            <v-card-title>Test</v-card-title>
-            <v-card-text>Description</v-card-text>
-          </v-card>
-        </v-col>
-        <v-col cols="4" md="6">
-          <v-card>
-            <v-card-title>Test</v-card-title>
-            <v-card-text>Description</v-card-text>
-          </v-card>
-        </v-col>
-        <v-col cols="4" md="6">
-          <v-card>
-            <v-card-title>Test</v-card-title>
-            <v-card-text>Description</v-card-text>
+        <v-col cols="4" md="6" v-for="pres in presentations">
+          <v-card @click="travel(pres.url)">
+            <v-card-title>{{pres?.name}}</v-card-title>
+            <v-card-text>{{pres?.description}}</v-card-text>
           </v-card>
         </v-col>
       </v-row>
@@ -48,7 +29,6 @@ const particlesLoaded = async container => {
   <vue-particles
       id="tsparticles"
       :particlesInit="particlesInit"
-      :particlesLoaded="particlesLoaded"
       :options="{
                     // background: {
                     //     color: {
