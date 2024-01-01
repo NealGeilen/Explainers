@@ -67,7 +67,7 @@ jobs:
 
   code-analysis:
     name: Code analysis
-    needs: [ build-frontend ]
+    needs: [ build-frontend, lint-frontend ]
     runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
     timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}
     permissions:
