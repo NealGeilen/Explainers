@@ -16,8 +16,8 @@ function travel(path: string): void {
     <div class="d-block">
       <h1 class="text-primary text-center">Explainers</h1>
       <v-row>
-        <v-col cols="4" md="6" v-for="pres in presentations">
-          <v-card @click="travel(pres.url)">
+        <v-col cols="4" md="6" v-for="pres in presentations" :key="pres?.url">
+          <v-card @click="travel(pres?.url)">
             <v-card-title>{{ pres?.name }}</v-card-title>
             <v-card-text>{{ pres?.description }}</v-card-text>
           </v-card>
