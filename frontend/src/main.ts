@@ -3,7 +3,7 @@ import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
-import Particles from "vue3-particles";
+import Particles from 'vue3-particles'
 
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
@@ -14,17 +14,17 @@ const vuetify = createVuetify({
   components,
   directives,
   theme: {
-    defaultTheme: "dark",
+    defaultTheme: 'dark',
     themes: {
       dark: {
         dark: true,
         colors: {
-          primary: "#1985A1",
-          secondary: "#06083f",
-        },
-      },
-    },
-  },
+          primary: '#1985A1',
+          secondary: '#06083f'
+        }
+      }
+    }
+  }
 })
 
 const app = createApp(App)

@@ -40,29 +40,30 @@ jobs:
       - name: Build
         run: pnpm --prefix ./frontend run build && pnpm --prefix ./slidev run build-explainers
 
-#  lint-frontend:
-#    name: Lint and format frontend
-#    runs-on: ubuntu-20.04
-#    needs: [ build-frontend ]
-#    defaults:
-#      run:
-#        working-directory: Epsilon.Host.Frontend
-#    steps:
-#      - uses: actions/checkout@v4
-#      - uses: pnpm/action-setup@v2
-#        with:
-#          version: 8
-#      - uses: actions/setup-node@v4
-#        with:
-#          node-version: 18
-#          cache: 'pnpm'
-#          cache-dependency-path: 'Epsilon.Host.Frontend/pnpm-lock.yaml'
-#      - name: Install modules
-#        run: pnpm install
-#      - name: Perform linter
-#        run: pnpm run lint
-#      - name: Perform code formatter
-#        run: pnpm run format-code
+  lint-frontend:
+    name: Lint and format frontend
+    runs-on: ubuntu-20.04
+    needs: [ build-frontend ]
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [ 'frontend', 'slidev' ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'pnpm'
+          cache-dependency-path: '${{ matrix.project }}/pnpm-lock.yaml'
+      - name: Install modules
+        run: pnpm --prefix ./${{ matrix.project }} install
+      - name: Perform linter
+        run: pnpm --prefix ./${{ matrix.project }} run lint
+      - name: Perform code formatter
+        run: pnpm --prefix ./${{ matrix.project }} run format-code
 
   code-analysis:
     name: Code analysis

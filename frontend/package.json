@@ -7,7 +7,7 @@
     "build": "pnpm i && vite build --outDir ./../dist",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint .. --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src"
+    "format": "prettier --check ."
   },
   "dependencies": {
     "pinia": "^2.1.7",
