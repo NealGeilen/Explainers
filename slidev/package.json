@@ -7,7 +7,7 @@
     "build": "slidev build ./explainers/git-explained.md --out ./../../dist",
     "dev": "slidev --open",
     "export": "slidev export",
-    "lint": "eslint .. --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
     "format": "prettier --check ."
   },
   "dependencies": {
