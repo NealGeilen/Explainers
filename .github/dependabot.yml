@@ -7,21 +7,15 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-  # Maintain dependencies of nuget packages
-  - package-ecosystem: "nuget"
-    directory: "/"
-    target-branch: "develop"
-    schedule:
-      interval: "weekly"
   # Maintain dependencies for javascript
   - package-ecosystem: "npm"
-    directory: "/Epsilon.Host.Frontend"
+    directory: "/frontend"
     target-branch: "develop"
     schedule:
       interval: "daily"
-  # Maintain dependencies for docker images
-  - package-ecosystem: "docker"
-    directory: "/"
+  # Maintain dependencies for javascript
+  - package-ecosystem: "npm"
+    directory: "/slidev"
     target-branch: "develop"
     schedule:
-      interval: "weekly"
+      interval: "daily"
