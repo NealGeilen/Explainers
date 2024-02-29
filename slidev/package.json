@@ -15,7 +15,7 @@
     "@vue/eslint-config-typescript": "^12.0.0",
     "@vue/tsconfig": "^0.5.1",
     "eslint": "^8.49.0",
-    "eslint-plugin-vue": "^9.17.0",
+    "eslint-plugin-vue": "^9.22.0",
     "@slidev/cli": "^0.47.5",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest"
