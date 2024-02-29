@@ -32,8 +32,8 @@ devDependencies:
     specifier: ^18.2.2
     version: 18.2.2
   '@types/node':
-    specifier: ^18.19.2
-    version: 18.19.2
+    specifier: ^20.11.24
+    version: 20.11.24
   '@vitejs/plugin-vue':
     specifier: ^4.5.1
     version: 4.5.1(vite@5.0.5)(vue@3.3.10)
@@ -66,7 +66,7 @@ devDependencies:
     version: 5.2.2
   vite:
     specifier: ^5.0.5
-    version: 5.0.5(@types/node@18.19.2)
+    version: 5.0.5(@types/node@20.11.24)
   vue-tsc:
     specifier: ^1.8.25
     version: 1.8.25(typescript@5.2.2)
@@ -802,8 +802,8 @@ packages:
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
     dev: true
 
-  /@types/node@18.19.2:
-    resolution: {integrity: sha512-6wzfBdbWpe8QykUkXBjtmO3zITA0A3FIjoy+in0Y2K4KrCiRhNYJIdwAPDffZ3G6GnaKaSLSEa9ZuORLfEoiwg==}
+  /@types/node@20.11.24:
+    resolution: {integrity: sha512-Kza43ewS3xoLgCEpQrsT+xRo/EJej1y0kVYGiLFE1NEODXGzTfwiC6tXTLMQskn1X4/Rjlh0MQUvx9W+L9long==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -957,7 +957,7 @@ packages:
       '@babel/core': 7.23.6
       '@babel/plugin-transform-typescript': 7.23.6(@babel/core@7.23.6)
       '@vue/babel-plugin-jsx': 1.1.5(@babel/core@7.23.6)
-      vite: 5.0.5(@types/node@18.19.2)
+      vite: 5.0.5(@types/node@20.11.24)
       vue: 3.3.10(typescript@5.2.2)
     transitivePeerDependencies:
       - supports-color
@@ -970,7 +970,7 @@ packages:
       vite: ^4.0.0 || ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.0.5(@types/node@18.19.2)
+      vite: 5.0.5(@types/node@20.11.24)
       vue: 3.3.10(typescript@5.2.2)
     dev: true
 
@@ -2877,7 +2877,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite@5.0.5(@types/node@18.19.2):
+  /vite@5.0.5(@types/node@20.11.24):
     resolution: {integrity: sha512-OekeWqR9Ls56f3zd4CaxzbbS11gqYkEiBtnWFFgYR2WV8oPJRRKq0mpskYy/XaoCL3L7VINDhqqOMNDiYdGvGg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -2905,7 +2905,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 18.19.2
+      '@types/node': 20.11.24
       esbuild: 0.19.9
       postcss: 8.4.32
       rollup: 4.8.0
