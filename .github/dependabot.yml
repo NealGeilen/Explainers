@@ -10,12 +10,12 @@ updates:
   # Maintain dependencies for javascript
   - package-ecosystem: "npm"
     directory: "/frontend"
-    target-branch: "develop"
+    target-branch: "main"
     schedule:
       interval: "daily"
   # Maintain dependencies for javascript
   - package-ecosystem: "npm"
     directory: "/slidev"
-    target-branch: "develop"
+    target-branch: "main"
     schedule:
       interval: "daily"
