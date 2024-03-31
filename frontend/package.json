@@ -18,7 +18,7 @@
     "vuetify": "^3.5.13"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.10.0",
+    "@rushstack/eslint-patch": "^1.10.1",
     "@tsconfig/node18": "^18.2.4",
     "@types/node": "^20.11.30",
     "@vitejs/plugin-vue": "^5.0.4",
