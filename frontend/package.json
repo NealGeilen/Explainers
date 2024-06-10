@@ -13,7 +13,7 @@
     "pinia": "^2.1.7",
     "tsparticles-slim": "^2.12.0",
     "vue": "^3.4.27",
-    "vue-router": "^4.3.2",
+    "vue-router": "^4.3.3",
     "vue3-particles": "^2.12.0",
     "vuetify": "^3.6.8"
   },
