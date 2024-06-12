@@ -21,8 +21,8 @@ dependencies:
     specifier: ^2.12.0
     version: 2.12.0(typescript@5.4.5)
   vuetify:
-    specifier: ^3.6.8
-    version: 3.6.8(typescript@5.4.5)(vue@3.4.27)
+    specifier: ^3.6.9
+    version: 3.6.9(typescript@5.4.5)(vue@3.4.27)
 
 devDependencies:
   '@rushstack/eslint-patch':
@@ -2986,8 +2986,8 @@ packages:
       '@vue/shared': 3.4.27
       typescript: 5.4.5
 
-  /vuetify@3.6.8(typescript@5.4.5)(vue@3.4.27):
-    resolution: {integrity: sha512-j0v0iTeSVRj2ZEM9Q8HxejHxmxrQLYQSalhH82hfcraORaiDoqf1XV05N3P5ERXkKiJjJc/LfxFAUUvYSldxeg==}
+  /vuetify@3.6.9(typescript@5.4.5)(vue@3.4.27):
+    resolution: {integrity: sha512-LVIZL0OCwzg3Aw2F8nT1rK/renpTPOcDEPe5E002Vj+VjXwsCNqwwxNteGfrcNlp0vgIJ8WusMvaxp69UJ3NJg==}
     engines: {node: ^12.20 || >=14.13}
     peerDependencies:
       typescript: '>=4.7'
